@@ -1,0 +1,51 @@
+body {
+background-color: green;
+}
+
+body form .form_style {
+margin-top: 100px;
+}
+
+.center {
+  text-align: center;
+}
+table {
+  color: white;
+}
+body ul li a .navy_font{
+ font-family: 'Lato', sans-serif;
+}
+
+/*.form-group {
+text-align: center;
+justify-content: center;
+width: 400px;
+position: absolute;
+left: 0;
+right: 0;
+margin: auto;
+
+}*/
+
+h2, h3 {
+ text-align: center;
+ margin-top: 2em;
+ color: white;
+}
+
+<<<<<<< HEAD
+
+@media screen and (max-width: 450) {
+
+  .deleted {
+    display: none;
+  }
+
+=======
+@media screen and (max-width: 450) {
+
+.deleted {
+  display: none;
+}
+>>>>>>> 925affbadc750db0725dc3cff8d884d9d17cd7dc
+}

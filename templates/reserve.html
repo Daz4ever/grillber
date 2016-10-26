@@ -1,0 +1,53 @@
+{%extends "layout.html"%}
+{% block body %}
+<h2>Reserve Your Grill</h2>
+    <div class="form-group reserve">
+
+    <form class="form_style" action="/submit_date" method="POST">
+    <input class="date" type="text" id="datepicker" name="date" placeholder="Choose a Date" required>
+    <!-- <div class="radio">
+      <label class="myeggs">
+      <input type="radio" name="size" value="md" checked>
+      Medium Egg
+    </label>
+    <label class="myeggs">
+      <input type="radio" name="size" value="lg">
+      Large Egg
+    </label>
+    <label class="myeggs">
+      <input type="radio" name="size" value="xl">
+      Extra Large Egg
+    </label>
+    </div> -->
+
+    <button type="submit" name="action" class="btn btn-default">Submit</button>
+
+    </form>
+    </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+  var dateToday = new Date();
+   var dates = $("#datepicker").datepicker({
+       defaultDate: "+1w",
+       changeMonth: true,
+       numberOfMonths: 1,
+       minDate: dateToday,
+       onSelect: function(selectedDate) {
+           var option = this.id == "datepicker" ? "minDate" : "maxDate",
+               instance = $(this).data("datepicker"),
+               date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
+           dates.not(this).datepicker("option", option, date);
+       }
+   });
+
+
+  </script>
+
+{% endblock %}

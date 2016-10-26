@@ -1,0 +1,91 @@
+{%extends "layout.html"%}
+{% block body %}
+
+<div>
+<table class="table">
+  <thead class="thead-inverse">
+  <tr>
+    <th>
+      reservation date
+    </th>
+    <th>
+      grill size
+    </th>
+    <th>
+      grill name
+    </th>
+    <th>
+      customer name
+    </th>
+    <th>
+    street
+    </th>
+    <th>
+      zip code
+    </th>
+    <th>
+      email
+    </th>
+    <th>
+      phone number
+    </th>
+    <th>
+      Remarks
+    </th>
+    <th>
+      Status
+    </th>
+    <th>
+      Cancel
+    </th>
+  </tr>
+</thead>
+{% for reservation in query %}
+
+<tr>
+  <td>{{reservation.reserve_date}}</td>
+  <td>{{reservation.size}}</td>
+  <td>{{reservation.unit_name}}</td>
+  <td>{{reservation.name}}</td>
+  <td>{{reservation.street}}</td>
+  <td>{{reservation.zip_code}}</td>
+  <td>{{reservation.email}}</td>
+  <td>{{reservation.phone}}</td>
+
+  {% if not reservation.is_rented %}
+
+
+  <form action="/submit_rental" class="form-group" method="post">
+    <td>
+    <input type="textarea" class="form-control" rows ="3" cols="12" name="remarks" placeholder="Enter Comments Here">
+    </td>
+    <td>
+      <input type="hidden" name="grill_id" value="{{reservation.g_id}}">
+      <input type="hidden" name="rent_date" value="{{reservation.reserve_date}}">
+      <input type="hidden" name="rid" value="{{reservation.rid}}">
+      <button type="submit" class = "btn btn-warning" name="rent" value="{{reservation.is_rented}}">Rent</button>
+  </td>
+</form>
+
+    <td><form action="/submit_cancel" method="post">
+    <button class="btn btn-danger" type="submit" name="cancel" value="{{reservation.rid}}">Cancel</button>
+  </form>
+</td>
+    {%elif reservation.is_rented %}
+    <form action="/submit_rental" class="form-group" method="post">
+    <td>
+      <input type="text" class="form-control" rows ="3" cols="12" name="remarks" value="{{reservation.remarks}}">
+    </td>
+    <td>  <input type="hidden" name="grill_id" value="{{reservation.g_id}}">
+      <input type="hidden" name="rid" value="{{reservation.rid}}">
+        <button type="submit" class = "btn btn-primary" name="rent" value="{{reservation.is_rented}}">Return</button>
+    </td>  </form>
+
+      {%endif%}
+</tr>
+
+{% endfor%}
+</table>
+</div>
+
+{% endblock %}
