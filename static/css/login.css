@@ -33,19 +33,10 @@ h2, h3 {
  color: white;
 }
 
-<<<<<<< HEAD
+@media screen and (max-width: 500px) {
 
-@media screen and (max-width: 450) {
-
-  .deleted {
+  body nav ul li.delete {
     display: none;
   }
 
-=======
-@media screen and (max-width: 450) {
-
-.deleted {
-  display: none;
-}
->>>>>>> 925affbadc750db0725dc3cff8d884d9d17cd7dc
 }
