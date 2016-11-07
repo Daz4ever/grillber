@@ -1,4 +1,4 @@
-![Alt text](pics/grillberimageread.png)
+![Alt text](grillberimageread.png)
 
 Grillber
 
