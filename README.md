@@ -1,23 +1,24 @@
 ![Alt text](grillberimageread.png)
 
-Grillber
+
+#Grillber
+Created as a collaborative, full-stack project at DigitalCrafts.
 
 www.grillber.com
 
-Contents
+##Contents
+  * Overview
+  * Technologies
+  * Challenges and Solutions
+  * MVP
+  * Stretch Goals
+  * Contributors
+  * Example Code
 
-Overview
-Technologies
-Challenges and Solutions
-MVP
-Stretch Goals
-Contributors
-Example Code
-
-Overview
+##Overview
 Grillber is a grill rental service offering a selection of Big Green Eggs available for daily rental.  Customers are able to select from three models, depending on their needs, by choosing a date and size based on available inventory.  Payment is accepted via Stripe API.  Customer can manage their reservations through a customer account portal.  Likewise, the owner can manage all customer reservations through an owner portal.
 
-Technologies
+##Technologies
 The following technologies and APIs were used:
 HTML
 CSS
@@ -31,10 +32,10 @@ PostGreSQL/PyGreSQL
 WSGI
 Stripe API
 
-Challenges and Solutions
+##Challenges and Solutions
 
 1. Prioritizing functionality vs styling
-During the planning stage of the build, we identified baseline features, some of which potentially needed styling as part of testing for functionality.  Initially our main page was heavily styled via a free html/css template, which provided a structure for testing initial features.  We experienced a loss of efficiency by simultaneously trying to implement additional styling alongside new features.  For example, we had envisioned a one-page app but as we added a more robust reservation system, customer account portal, and owner portal, it became clear that separate pages were needed.  Front-end features such as smooth scrolling were not applicable to subsequent pages and a separate layout scheme had to be developed accordingly.
+During the planning stage of the build, we identified baseline features, some of which potentially needed styling as part of testing for functionality.  Initially we added a blank online template, which provided a structure for testing initial features.  We experienced a loss of efficiency by simultaneously trying to navigate the massive amounts of code in the blank template while implementing new styling and features.  For example, we had envisioned a one-page app but as we added a more robust reservation system, customer account portal, and owner portal, it became clear that separate pages were needed.  Front-end features such as smooth scrolling were not applicable to subsequent pages and a separate layout scheme had to be developed accordingly. 
 
 Ultimately, we had two solutions:  First we utilized the Scrum methodology to our advantage, as much of the small step planning that we had originally accounted for translated well into working efficiently through the hiccups of modifying the massive template styling files.  A small piece of functionality or back end work would be implemented (i.e. the reservation portal html file, and corresponding route in python), and then the front end team could work to style that smaller step, and incorporate it into the larger styling template.  Secondly, for the feature pages, a secondary layout.html file was created from which all of the added feature pages could extend.  This helped to drastically reduce the need to sort through the thousands of lines of CSS in the template, and allowed for more directed, efficient styling of those pages, as they were developed.
 
@@ -63,28 +64,28 @@ Having built the site, the features, links, description and flow all made sense 
 
 
 
-MVP
+##MVP
 We wanted to create Grillber to be a basic, yet fully functional grill rental app and decided the following features were necessary to achieve that goal:
-	•	Responsive, professional front-end site - First impressions are critical, so we knew that front-end design was essential for presenting Grillber.  The main page features an intuitive layout with sidebar navigation for desktop browsing top navbar for mobile navigation.  It also includes sections covering the basics of product overview and grill reservation, as well as links to the login and rental pages.  We also tested the design to ensure a seamless, mobile experience wherein we minimized the links on the navigation bar.
-	•	Database designed to handle reservations -
-	•	Calendar and grill buttons - We used a jQuery UI calendar to allow our customers to select a date.  The date is passed to the database as a query which returns available grill sizes that populate on the website as buttons.  
+  * Responsive, professional front-end site - First impressions are critical, so we knew that front-end design was essential for presenting Grillber.  The main page features an intuitive layout with sidebar navigation for desktop browsing top navbar for mobile navigation.  It also includes sections covering the basics of product overview and grill reservation, as well as links to the login and rental pages.  We also tested the design to ensure a seamless, mobile experience wherein we minimized the links on the navigation bar.
+  * Database designed to handle reservations -
+  * Calendar and grill buttons - We used a jQuery UI calendar to allow our customers to select a date.  The date is passed to the database as a query which returns available grill sizes that populate on the website as buttons.  
 
 
-Stretch Goals
+##Stretch Goals
 We were able to meet one of our stretch goals: Adding Stripe as a payment method.  On further iterations of Grillber, we would implement the following:
-	•	Option to buy add-on packages - These packages would include items such as food, tents, turf pads, and chairs to supplement customer events like tailgating or parties.
-	•	Delivery - The reservation system would handle scheduling for the delivery of grills with the possibility of scheduling grill pick-ups as well.  
-	•	Social media integration - Setting up Grillber on sites such as Facebook, Twitter, and Instagram to allow customers to share stories and images of Grillber experiences.  
-	•	Subscribe to promotions - Send a periodical newsletter with current promotions and sales, while also integrating social media narratives to promote Grillber.
-	•	Owner search page - Allowing the owner to quickly navigate through the owner portal by implementing a search function.
-	•	Confirmation email - Currently, flash alerts and rendered pages alert a customer as to the transactions on the site.  Confirmation emails would be sent to the user upon reservation and payment of a selected grill.
-	•	Peer to peer rentals - Allowing for users to rent their grill on other users on Grillber, similar to the model of Airbnb.
-	•	Additional styling - Create a fully functional, one page website where the logins and rentals are handled on the main page.
+  * Option to buy add-on packages - These packages would include items such as food, tents, turf pads, and chairs to supplement customer events like tailgating or parties.
+  * Delivery - The reservation system would handle scheduling for the delivery of grills with the possibility of scheduling grill pick-ups as well.  
+  * Social media integration - Setting up Grillber on sites such as Facebook, Twitter, and Instagram to allow customers to share stories and images of Grillber experiences.  
+  * Subscribe to promotions - Send a periodical newsletter with current promotions and sales, while also integrating social media narratives to promote Grillber.
+  * Owner search page - Allowing the owner to quickly navigate through the owner portal by implementing a search function.
+  * Confirmation email - Currently, flash alerts and rendered pages alert a customer as to the transactions on the site.  Confirmation emails would be sent to the user upon reservation and payment of a selected grill.
+  * Peer to peer rentals - Allowing for users to rent their grill on other users on Grillber, similar to the model of Airbnb.
+  * Additional styling - Create a fully functional, one page website where the logins and rentals are handled on the main page.
 
 
-Contributors
+##Contributors
 
-Jason Campbell
-Keyur Patel
-Dominic Zenon
-Autumn Coleman
+  * Jason Campbell
+  * Keyur Patel
+  * Dominic Zenon
+  * Autumn Coleman
